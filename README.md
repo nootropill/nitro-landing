@@ -4,6 +4,9 @@
 - БЭМ
 - Препроцессор стилей Sass
 
+Ссылка на лендинг:
+https://nootropill.github.io/nitro-landing/  
+
 Макет Figma:  
 https://www.figma.com/design/pPrMI03RfULpSeJ7IBLTRr/Nitro---Agency-Website-9--Page--Community---Copy-?node-id=2930-22622&t=UWfbwCmPU5dEoN8p-1
   
