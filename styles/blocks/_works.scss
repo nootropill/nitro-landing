@@ -1,0 +1,25 @@
+@use '../abstracts/abstracts';
+
+.works {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    align-items: center;
+
+    @include abstracts.mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include abstracts.tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

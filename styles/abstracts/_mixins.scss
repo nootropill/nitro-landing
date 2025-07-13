@@ -1,0 +1,58 @@
+// файл с миксинами
+@mixin fluid-text($min: 16, $max: 48) {
+  font-size: clamp(#{$min}px, #{calc($max / 1440) * 100}vw, #{$max}px);
+}
+
+@mixin reset-link {
+  // цвет ссылки наследуется от родителя
+  color: inherit;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  }
+
+  @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+// центрирование элемента внутри родителя
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1 / 1;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}

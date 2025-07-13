@@ -1,0 +1,36 @@
+@use '../abstracts/abstracts';
+
+.cross-button {
+  @include abstracts.reset-button;
+  position: relative;
+  width: 60px;
+  height: 47px;
+
+  &::before,
+  &::after {
+    content: '';
+    @include abstracts.abs-center;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--shades-white);
+    transition-duration: var(--transition-duration);
+  }
+
+  &::before {
+    rotate: 30deg;
+  }
+
+  &::after {
+    rotate: -30deg;
+  }
+
+  @include abstracts.hover {
+    &::before, 
+    &::after {
+      background-color: var(--primary-400);
+    }
+  }
+}
+

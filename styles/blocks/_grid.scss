@@ -1,0 +1,19 @@
+@use '../abstracts/abstracts';
+
+.grid {
+  --gridColumns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  row-gap: 40px;
+
+  @include abstracts.mobile {
+    row-gap: 30px;
+  }
+
+  @for $i from 2 to 13 {
+    &--#{$i} {
+      --gridColumns: #{$i};
+    }
+  }
+}

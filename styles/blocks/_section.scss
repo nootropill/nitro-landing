@@ -1,0 +1,11 @@
+.section {
+  padding-bottom: var(--section-padding-y);
+
+  &:first-of-type {
+    padding-top: var(--section-padding-y);
+  }
+
+  &--overflow-x-hidden {
+    overflow-x: hidden;
+  }
+}

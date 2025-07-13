@@ -1,0 +1,19 @@
+@use '../abstracts/abstracts';
+
+.hero {
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @include abstracts.mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

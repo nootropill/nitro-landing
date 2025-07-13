@@ -1,0 +1,21 @@
+@use '../abstracts/abstracts';
+
+.client-review {
+  padding: 40px;
+  height: 100%;
+  background-color: var(--primary-900);
+  width: clamp(280px, 29vw, 565px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  &__body {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  &__name {
+    font-weight: 600;
+    @include abstracts.fluid-text(20, 24);
+  }
+}

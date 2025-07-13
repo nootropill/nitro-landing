@@ -1,0 +1,100 @@
+// миксины для работы с медиа-запросами
+
+// -above переменные для mobile-first
+$big-desktop-above: 1921px;
+$big-desktop: 1920px;
+
+$desktop-above: 1281px;
+$desktop: 1280px;
+
+$tablet-above: 994px;
+$tablet: 993px;
+
+$mobile: 769px;
+$mobile-above: 768px;
+
+$mobile-s-above: 481px;
+$mobile-s: 480.98px;
+
+// шаблон медиа-запроса
+@mixin big-desktop-above {
+  @media (min-width: $big-desktop-above) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media (max-width: $big-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-above {
+  @media (min-width: $desktop-above) {
+    // уникальные свойства для селектора, внутри которого вызван миксин
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (min-width: $tablet-above) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (min-width: $mobile-above) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// для точного соответствия макету
+@mixin mobile-s-above {
+  @media (min-width: $mobile-s-above) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (max-width: $mobile-s) {
+    @content;
+  }
+}
+
+// состояние :hover при тапе с мобильного устройства
+// создает эффект залипания до следующего тапа
+// этот миксин - решение  проблемы
+@mixin hover {
+
+  // для desktop
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  // для устройств с тач-экраном
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

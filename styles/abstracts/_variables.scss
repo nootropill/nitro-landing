@@ -1,0 +1,69 @@
+@use 'media';
+
+:root {
+  --font-family: "Supreme", sans-serif;
+  --second-family: "Outfit", sans-serif;
+  
+  --primary-50: #e5f6f4;
+  --primary-100: #ccede9;
+  --primary-200: #99dbd4;
+  --primary-300: #66cabe;
+  --primary-400: #33b8a9;
+  --primary-500: #00a693;
+  --primary-600: #008576;
+  --primary-700: #006458;
+  --primary-800: #004b49;
+  --primary-900: #00211d;
+  --neutral-50: #f5f6f9;
+  --neutral-100: #e6e9f0;
+  --neutral-200: #d7dbe6;
+  --neutral-300: #c9cedd;
+  --neutral-400: #bac1d4;
+  --neutral-500: #9ca6c1;
+  --neutral-600: #818eb0;
+  --neutral-700: #546286;
+  --neutral-800: #323b50;
+  --neutral-900: #11141b;
+  --shades-black: #001412;
+  --shades-white: #fff;
+  --error---50: #ffe6e5;
+  --error---100: #ffc1bf;
+  --error---200: #ff9c99;
+  --error---300: #ff7773;
+  --error---400: #ff524d;
+  --error---500: #ff0800;
+  --error---600: #d90700;
+  --error---700: #b30600;
+  --error---800: #8c0400;
+  --error---900: #660300;
+
+  --border-radius: 100px;
+
+  --container-width: 1640px;
+  --container-padding-x: 140px;
+  // taken from desktop version / 2
+  --section-padding-y: 140px;
+
+  --rectangle-button-height: 71px;;
+  --button-height: 27px;
+
+  --input-height: 64px;
+
+  --transition-duration: .2s;
+
+  @include media.desktop {
+    --container-width: 1119px;
+    --container-padding-x: 80px;
+    --section-padding-y: 100px;
+  }
+
+  @include media.tablet {
+    --container-width: 704px;
+    --container-padding-x: 32px;
+    --section-padding-y: 80px;
+  }
+
+  @include media.mobile {
+    --container-padding-x: 20px;
+  }
+}

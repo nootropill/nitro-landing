@@ -1,0 +1,30 @@
+@use '../abstracts/abstracts';
+
+.burger-button {
+  width: 60px;
+  height: 47px;
+  @include abstracts.reset-button;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: 48%;
+    translate: -48% -38%;
+    border-radius: 5px;
+    width: 60px;
+    height: 2px;
+    background-color: var(--shades-white);
+    box-shadow: 0 10px 0 0 var(--shades-white);
+    transition-duration: var(--transition-duration);
+
+  }
+
+  @include abstracts.hover {
+    &::before {
+      background-color: var(--primary-400);
+      box-shadow: 0 10px 0 0 var(--primary-400);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@use '../abstracts/abstracts';
+
+.communication {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  justify-items: center;
+
+  @include abstracts.desktop {
+    gap: 40px;
+  }
+
+  @include abstracts.tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    & a:hover {
+      color: var(--primary-400);
+    }
+  }
+
+  &__mail {
+    font-family: var(--second-family);
+    font-weight: 600;
+    @include abstracts.fluid-text(20, 32);
+    line-height: 131%;
+    letter-spacing: -0.02em;
+  }
+
+  &__inner-list {
+    padding-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    row-gap: 24px;
+    column-gap: 32px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    border: none;
+    box-shadow: none;
+    padding: 20px;
+    transition-duration: .1s;
+
+    @include abstracts.mobile {
+      padding: 10px;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--neutral-500);
+    }
+
+    &:focus {
+      outline-offset: -2px;
+      outline: 2px solid var(--primary-500);
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 20px;
+    @include abstracts.flex-center;    
+    background: var(--primary-500);
+
+    & svg * {
+      fill: var(--shades-white);
+    }
+
+    @include abstracts.hover {
+      background-color: var(--primary-700);
+    }
+  }
+}

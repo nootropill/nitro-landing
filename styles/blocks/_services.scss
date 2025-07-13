@@ -1,0 +1,24 @@
+@use '../abstracts/abstracts';
+
+.services {
+  &__inner {
+    margin-bottom: 60px;
+    @include abstracts.tablet {
+      margin-bottom: 40px;
+    }
+
+    @include abstracts.mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    @include abstracts.tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

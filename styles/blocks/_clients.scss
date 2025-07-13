@@ -1,0 +1,35 @@
+@use '../abstracts/abstracts';
+
+.clients {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    @include abstracts.tablet {
+      row-gap: 40px;
+    }
+
+    @include abstracts.desktop-above {
+      max-width: var(--container-width);
+      padding-inline: var(--container-padding-x);
+      margin-inline: auto;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    align-self: center;
+    column-gap: 40px;
+  }
+
+  &__item {
+    width: 212px;
+  }
+
+  &__bottom-list {
+    align-self: center;
+  }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/abstracts';
+
+.field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  font-weight: 400;
+  @include abstracts.fluid-text(16, 20);
+
+  &__input {
+    width: min(41vw, 720px);
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--primary-500);
+    background-color: var(--primary-50);
+    font-weight: 400;
+
+    @include abstracts.tablet {
+      width: 100%;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px 0 rgba(137, 59, 255, 0.05);
+      background-color: var(--shades-white);
+      outline: 1px solid var(--primary-500);
+    }
+
+    @include abstracts.hover {
+      background-color: var(--primary-100);
+      outline: 1px solid var(--primary-500);
+    }
+
+    &--textarea {
+      transition: resize 0s;
+      resize: vertical;
+    }
+  }
+}
